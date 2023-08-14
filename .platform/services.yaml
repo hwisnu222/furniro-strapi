@@ -1,10 +1,12 @@
-# The name given to the PostgreSQL service (lowercase alphanumeric only).
-dbpostgres:
-  # The type of your service (postgresql), which uses the format
-  # 'type:version'. Be sure to consult the PostgreSQL documentation
-  # (https://docs.platform.sh/add-services/postgresql.html#supported-versions)
-  # when choosing a version. If you specify a version number which is not available,
-  # the CLI will return an error.
-  type: postgresql:15
-  # The disk attribute is the size of the persistent disk (in MB) allocated to the service.
+# The services of the project.
+
+# Each service listed is deployed
+# to power your Platform.sh project.
+
+db:
+  type: postgresql:12
   disk: 256
+# Uncomment the line below to use a MySQL database
+# dbmysql:
+#   type: oracle-mysql:8.0
+#   disk: 256
