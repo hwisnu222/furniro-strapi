@@ -1,31 +1,30 @@
 {
   "kind": "collectionType",
-  "collectionName": "transactions",
+  "collectionName": "carts",
   "info": {
-    "singularName": "transaction",
-    "pluralName": "transactions",
-    "displayName": "Transaction",
-    "description": ""
+    "singularName": "cart",
+    "pluralName": "carts",
+    "displayName": "Cart"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
     "total": {
       "type": "integer"
     },
-    "products": {
+    "product": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::product.product",
-      "inversedBy": "transactions"
+      "inversedBy": "carts"
     },
     "users_permissions_user": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "transactions"
+      "inversedBy": "carts"
     }
   }
 }

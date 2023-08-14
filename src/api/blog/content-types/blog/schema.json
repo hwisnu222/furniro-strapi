@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -34,6 +34,12 @@
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "blogs"
+    },
+    "category_blog": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category-blog.category-blog",
+      "inversedBy": "blog"
     }
   }
 }

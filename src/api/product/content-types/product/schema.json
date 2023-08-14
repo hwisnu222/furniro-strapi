@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -19,7 +19,8 @@
       "type": "richtext"
     },
     "rating": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 1
     },
     "image": {
       "type": "media",
@@ -74,6 +75,18 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::review.review",
+      "mappedBy": "product"
+    },
+    "carts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cart.cart",
+      "mappedBy": "product"
+    },
+    "likes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::like.like",
       "mappedBy": "product"
     }
   }
