@@ -84,10 +84,10 @@
       "target": "api::transaction.transaction",
       "mappedBy": "users_permissions_user"
     },
-    "likes": {
+    "wishlist": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::like.like",
+      "relation": "oneToOne",
+      "target": "api::wishlist.wishlist",
       "mappedBy": "users_permissions_user"
     }
   }

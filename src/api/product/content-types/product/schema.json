@@ -83,10 +83,10 @@
       "target": "api::cart.cart",
       "mappedBy": "product"
     },
-    "likes": {
+    "wishlist": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::like.like",
+      "relation": "oneToOne",
+      "target": "api::wishlist.wishlist",
       "mappedBy": "product"
     }
   }
