@@ -35,11 +35,15 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "blogs"
     },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
     "category_blog": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::category-blog.category-blog",
-      "inversedBy": "blog"
+      "inversedBy": "blogs"
     }
   }
 }

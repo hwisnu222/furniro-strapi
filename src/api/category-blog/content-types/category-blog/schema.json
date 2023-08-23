@@ -4,7 +4,8 @@
   "info": {
     "singularName": "category-blog",
     "pluralName": "category-blogs",
-    "displayName": "Category Blog"
+    "displayName": "Category Blog",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,9 +15,9 @@
     "category": {
       "type": "string"
     },
-    "blog": {
+    "blogs": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::blog.blog",
       "mappedBy": "category_blog"
     }

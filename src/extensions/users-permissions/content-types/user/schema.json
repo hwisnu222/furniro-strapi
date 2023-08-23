@@ -84,10 +84,22 @@
       "target": "api::transaction.transaction",
       "mappedBy": "users_permissions_user"
     },
-    "wishlist": {
+    "profile": {
       "type": "relation",
       "relation": "oneToOne",
+      "target": "api::profile.profile",
+      "mappedBy": "users_permissions_user"
+    },
+    "wishlists": {
+      "type": "relation",
+      "relation": "oneToMany",
       "target": "api::wishlist.wishlist",
+      "mappedBy": "users_permissions_user"
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
       "mappedBy": "users_permissions_user"
     }
   }

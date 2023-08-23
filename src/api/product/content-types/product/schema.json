@@ -15,16 +15,13 @@
     "name": {
       "type": "string"
     },
-    "description": {
-      "type": "richtext"
-    },
     "rating": {
       "type": "decimal",
       "default": 1
     },
     "image": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "allowedTypes": [
         "images",
@@ -41,14 +38,8 @@
     "additional": {
       "type": "richtext"
     },
-    "transactions": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::transaction.transaction",
-      "mappedBy": "products"
-    },
     "price": {
-      "type": "integer"
+      "type": "biginteger"
     },
     "disscount": {
       "type": "integer"
@@ -88,6 +79,18 @@
       "relation": "oneToOne",
       "target": "api::wishlist.wishlist",
       "mappedBy": "product"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "description": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "standard"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }
